@@ -1,11 +1,11 @@
 class Solution(object):
     def twoSum(self, nums, target):
-        positions = {}
+        arr = {}
 
-        for i, num in enumerate(nums):
-            complement = target-num
+        for i, j in enumerate(nums):
+            c = target-j
 
-            if complement in positions:
-                return [positions[complement],i]
+            if c in arr:
+                return [arr[c],i]
 
-            positions[num] = i
+            arr[j] = i
